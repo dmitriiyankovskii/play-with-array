@@ -4,9 +4,10 @@ const int COLS = 4;
 
 void print(int *);
 void print2(int [][COLS], int);
+void print3(int [][COLS]);
 
 int main(void) {
-    int arr1[5] = {1, 2, 3, 4, 5};
+    //int arr1[5] = {1, 2, 3, 4, 5};
     int arr[ROWS][COLS] = {
         {2, 45, 23, 53},
         {33, 78, 12, 0},
@@ -15,8 +16,9 @@ int main(void) {
         {213, 324, 9054, 332}
     };
     
-    print(arr1);
-    print2(arr, ROWS);
+    //print(arr1);
+    //print2(arr, ROWS);
+    print3(arr);
 }
 
 void print(int *array) {
@@ -32,4 +34,8 @@ void print2(int data[][COLS], int rows) {
         }
         printf("\n");
     }
+}
+
+void print3(int data[][COLS]) {
+    printf("%d", *(*(data + 3) + 3));
 }
