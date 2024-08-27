@@ -1,0 +1,1 @@
+void input_param(int *rows, int *pows);

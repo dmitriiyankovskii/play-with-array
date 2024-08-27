@@ -6,21 +6,19 @@
 #include "input.h"
 #include "addition.h"
 #include "print.h"
+#include "input_param.h"
 
 int main(void) {
-    
     int rows = 0, cols = 0;
-
-    printf("Enter number of rows: \n");
-    scanf("%d", &rows);
-
-    printf("Enter number of cols: \n");
-    scanf("%d", &cols);
-
+    input_param(&rows, &cols);
+    
     int* first_matrix = (int*) calloc(cols * rows, sizeof(int));
     int* second_matrix = (int*) calloc(cols * rows, sizeof(int));
     int* result_matrix = (int*) calloc(cols * rows, sizeof(int));
 
+    FILE *myfile;
+    myfile = fopen("matrixes.txt", "r");
+    
     printf("Enter first matrix: \n");
     input(first_matrix, rows, cols);
 
