@@ -1,0 +1,1 @@
+void enter_matrix_way_to_rows(int *matrix_length_rows, int *matrix_way_to_rows, int rows);

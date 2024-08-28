@@ -1,0 +1,1 @@
+void triangle_input_param(int *rows, int *cols);
