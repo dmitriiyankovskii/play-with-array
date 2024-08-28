@@ -9,6 +9,8 @@
 
 int main(void) {
     int rows = 0, cols = 0;
+    //FILE *myfile;
+    //myfile = fopen("", "r");
 
     triangle_input_param(&rows, &cols);
 
