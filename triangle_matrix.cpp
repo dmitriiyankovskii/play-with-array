@@ -10,7 +10,11 @@
 int main(void) {
     int rows = 0;
 
-    FILE *myfile = fopen("text.txt", "r");
+    FILE *myfile = fopen("triangle matrix.txt", "r");
+    
+    if(myfile == NULL) {
+        printf("ERROR\n");
+    }
 
     triangle_input_param(myfile, &rows);
 
