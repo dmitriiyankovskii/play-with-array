@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include "triangle_input_param.h"
 
-void triangle_input_param(int *rows, int *cols) {
-    printf("Enter number of rows and cols of triangle_matrix: \n");
-    scanf("%d %d", rows, cols);
+void triangle_input_param(FILE *myfile, int * rows) {
+    printf("start enter number of rows of triangle_matrix\n");
+    fscanf(myfile, "%d", rows);
+    printf("end enter number of rows of triangle_matrix\n");
 }
 

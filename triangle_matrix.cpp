@@ -8,11 +8,11 @@
 #include "print_triangle_matrix.h"
 
 int main(void) {
-    int rows = 0, cols = 0;
-    //FILE *myfile;
-    //myfile = fopen("", "r");
+    int rows = 0;
 
-    triangle_input_param(&rows, &cols);
+    FILE *myfile = fopen("text.txt", "r");
+
+    triangle_input_param(myfile, &rows);
 
     int number_of_cell = (1 + rows) * rows / 2;
 
@@ -29,10 +29,12 @@ int main(void) {
 
     enter_matrix_number_cell_in_row(matrix_number_cell_in_row, rows);
     
-    enter_triangle_matrix(triangle_matrix, matrix_number_cell_in_row, rows);
+    enter_triangle_matrix(myfile, triangle_matrix, matrix_number_cell_in_row, rows);
 
     print_triangle_matrix(triangle_matrix, matrix_number_cell_in_row, rows);
 
     free(triangle_matrix);
     free(matrix_number_cell_in_row);
+
+    fclose(myfile);
 }

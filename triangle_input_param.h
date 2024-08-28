@@ -1,1 +1,1 @@
-void triangle_input_param(int *rows, int *cols);
+void triangle_input_param(FILE *myfile, int *rows);
